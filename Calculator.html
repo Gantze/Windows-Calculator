@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>Windows Calculator</title>
+        <link rel="stylesheet" href="./css/reset.css"/>
+        <script src="https://kit.fontawesome.com/4802c08e59.js" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="./css/style.css"/>
+    </head>
+
+    <body>
+        <!-- Calculator -->
+        <div id="calculator">
+            <!-- Up bar -->
+            <heading>
+                <div>
+                    <p>Calculator</p>
+                </div>
+                <div>
+                    <ul>
+                        <li><i class="fa-solid fa-minus"></i></li>
+                        <li><i class="fa-regular fa-square"></i></li>
+                        <li><i class="fa-solid fa-xmark"></i></li>
+                    </ul>
+                </div>
+            </heading>
+            <!-- Container -->
+            <div id="container">
+                <!-- Visible side -->
+                <div id="visible-side">
+                    <!-- Calculator menu bar -->
+                    <div id="menu-container">
+                        <div id="menu-bar">
+                            <div id="menu-icon" title="Open Navigation">
+                                <i class="fa-solid fa-bars"></i>
+                            </div>
+                            <div>
+                                <h2>Standard</h2>
+                            </div>
+                            <div class="bordered-icons" title="Keep on top (Alt+Up)">
+                                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                            </div>
+                        </div>
+                        <div class="bordered-icons" title="History (Ctrl+H)">
+                            <i class="fa-solid fa-clock-rotate-left"></i>
+                        </div>
+                    </div>
+                    <!-- Total box -->
+                    <div id="display-box">
+                        <p id="display">0</p>
+                    </div>
+                    <!-- Memory menu -->
+                    <div id="memory-menu">
+                        <div id="memory-menu-left">
+                            <div class="grey-memory-buttons" onClick="clearMemory()">MC</div>
+                            <div class="grey-memory-buttons">MR</div>
+                            <div class="black-memory-buttons" title="Memory add (Ctrl+P)" onClick="addMemory()">M+</div>
+                            <div class="black-memory-buttons" title="Memory subtract (Ctrl+Q)" onClick="addMemory()">M-</div>
+                            <div class="black-memory-buttons" title="Memory store (Ctrl+M)" onClick="addMemory()">MS</div>
+                        </div>
+                        <div id="memory-menu-right" class="grey-memory-buttons">
+                            <p>M<i class="fa-solid fa-caret-down"></i></p>
+                        </div>
+                    </div>
+                    <!-- Buttons box -->
+                    <div id="buttons-box">
+                        <!-- Row 1 -->
+                        <div class="row">
+                            <div class="buttons grey-buttons">%</div>
+                            <div class="buttons grey-buttons clear">CE</div>
+                            <div class="buttons grey-buttons clear">C</div>
+                            <div id="delete" class="buttons grey-buttons">
+                                <i class="fa-solid fa-delete-left"></i>
+                            </div>
+                        </div>
+                        <!-- Row 2 -->
+                        <div class="row">
+                            <div id="one-divided" class="buttons grey-buttons">
+                                <p>
+                                    <sup>1</sup>/<span class="italic">x</span>
+                                </p>
+                            </div>
+                            <div id="exponential" class="buttons grey-buttons">
+                                <p>
+                                    <span class="italic">x</span><sup>2</sup>
+                                </p>
+                            </div>
+                            <div id="square-root" class="buttons grey-buttons">
+                                <p>
+                                    &radic;<span class="italic" style="text-decoration: overline;">x</span>
+                                </p>
+                            </div>
+                            <div class="buttons grey-buttons operators">/</div>
+                        </div>
+                        <!-- Row 3 -->
+                        <div class="row">
+                            <div class="buttons white-buttons digits">7</div>
+                            <div class="buttons white-buttons digits">8</div>
+                            <div class="buttons white-buttons digits">9</div>
+                            <div class="buttons grey-buttons operators">x</div>
+                        </div>
+                        <!-- Row 4 -->
+                        <div class="row">
+                            <div class="buttons white-buttons digits">4</div>
+                            <div class="buttons white-buttons digits">5</div>
+                            <div class="buttons white-buttons digits">6</div>
+                            <div class="buttons grey-buttons operators">-</div>
+                        </div>
+                        <!-- Row 5 -->
+                        <div class="row">
+                            <div class="buttons white-buttons digits">1</div>
+                            <div class="buttons white-buttons digits">2</div>
+                            <div class="buttons white-buttons digits">3</div>
+                            <div class="buttons grey-buttons operators">+</div>
+                        </div>
+                        <!-- Row 6 -->
+                        <div class="row">
+                            <div id="plus-minus" class="buttons white-buttons">
+                                <p>
+                                    <sup>+</sup>/-
+                                </p>
+                            </div>
+                            <div class="buttons white-buttons digits">0</div>
+                            <div id="point" class="buttons white-buttons">.</div>
+                            <div id="equals" class="buttons">
+                                <i class="fa-solid fa-equals"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Hidden side -->
+                <div id="hidden-side">
+                    <!-- History & memory bar -->
+                    <div id="hidden-titles">
+                        <div>
+                            <h3 id="history">History</h3>
+                        </div>
+                        <div>
+                            <h3 id="memory">Memory</h3>
+                        </div>
+                    </div>
+                    <br/>
+                    <!-- Record text box -->
+                    <div>
+                        <p>There's no history yet</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript" src="./js/myjavascript.js"> </script>
+    </body>
+
+</html>

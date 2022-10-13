@@ -1,0 +1,241 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    line-height: 22.5px;
+    font-size: 15px;
+}
+
+h2{
+    font-weight: bold;
+    font-size: 22px;
+}
+
+h3{
+    font-size: 17px;
+}
+
+#calculator{
+    background-color: hsl(0, 0%, 90%);
+    display: flex;
+    flex-direction: column;
+    min-width: 60%;
+    height: auto;
+    border: 1px solid black;
+    box-shadow: 0px 0px 15px 5px hsl(0, 0%, 75%); 
+}
+
+heading{
+    display: flex;
+    justify-content: space-between; 
+}
+
+heading div:first-child{
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+
+heading p, .fa-square{
+    font-size: 14px;
+    color: hsl(0, 0%, 50%);
+}
+
+sup{
+    vertical-align: super;
+    font-size: 12px;
+}
+
+.italic{
+    font-style: italic;
+}
+
+li{
+    padding: 6px 17px;
+    font-size: 16px;
+    color: hsl(0, 0%, 50%);
+}
+
+li:hover{
+    background-color: lightgrey;
+    cursor: pointer;
+}
+
+li:last-child:hover{
+    background-color: hsl(0, 100%, 47%);
+    color: white;
+    cursor: pointer;
+}
+
+ul{
+    display: flex;
+}
+
+#menu-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+#menu-bar{
+    display: flex;
+}
+
+.bordered-icons{
+    border: 1px solid hsl(0, 0%, 90%);
+}
+
+#menu-bar div, .bordered-icons{
+    padding: 6px 10px;
+}
+
+#menu-icon:hover, .bordered-icons:hover, .black-memory-buttons:hover{
+    background-color: hsl(0, 0%, 83%);
+    cursor: pointer;
+}
+
+.bordered-icons:hover, .black-memory-buttons:hover{
+    border: 1px solid darkgrey;
+}
+
+#display-box{
+    width: 100%;
+    text-align: right;
+    font-size: 48px;
+    font-weight: bold;
+    padding: 56px 10px;
+}
+
+#memory-menu{
+    display: flex;
+    justify-content: space-between;
+}
+
+#memory-menu-left{
+    display: flex;
+}
+
+.grey-memory-buttons, .black-memory-buttons{
+    padding: 10px 30px;
+    font-size: 13px;
+    font-weight: bold;
+    color: hsl(0, 0%, 80%);
+    cursor: default;
+    border: 1px solid hsl(0, 0%, 90%);
+}
+
+div.black-memory-buttons{
+    color: black;
+}
+
+.fa-caret-down{
+    font-size: 7px;
+    position: relative;
+    bottom: 5px;
+    left: 2px;
+}
+
+#buttons-box{
+    display: flex;
+    flex-direction: column;
+    padding: 2px;
+}
+
+.row{
+    display: flex;
+    width: 100%;
+}
+
+#hidden-side{
+    display: none;
+}
+
+.buttons{
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 30px;
+    border: 1px solid hsl(0, 0%, 90%);
+}
+
+.buttons:hover{
+    background-color: hsl(0, 0%, 83%);
+    border: 1px solid darkgrey;
+    cursor: pointer;
+}
+
+.grey-buttons{
+    background-color: hsl(0, 0%, 93%);
+}
+
+.white-buttons{
+    background-color: white;
+    font-weight: bold;
+    font-size: 19px;
+}
+
+#equals{
+    background-color: rgb(135, 187, 250);
+}
+
+#equals:hover{
+    background-color: steelblue;
+    cursor: pointer;
+}
+
+.operators{
+    font-size: 25px;
+}
+
+
+@media (min-width: 920px){
+    #container, #hidden-side{
+        display: flex;
+    }
+
+    #hidden-side{
+        flex-direction: column;
+        width: 40%;
+        padding: 14px 20px;
+    }
+
+    #visible-side{
+        width: 60%;
+    }
+
+    .fa-clock-rotate-left, #memory-menu-right{
+        display: none;
+    }
+
+    #memory-menu-left{
+        width: 100%;
+    }
+    
+    #memory-menu-left div{
+        width: 20%;
+    }
+
+    #hidden-titles{
+        font-weight: bold;
+        display: flex;
+    }
+
+    h3{
+        padding-bottom: 5px;
+    }
+
+    #history{
+        margin-right: 25px;
+        border-bottom: 4px solid rgb(30, 105, 255);
+    }
+
+    h3:hover{
+        cursor: pointer;
+    }    
+}
+
